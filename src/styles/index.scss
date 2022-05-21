@@ -1,4 +1,18 @@
 @import './variable.scss';
+
+
+
+@font-face {
+  font-family: 'SemiBold';
+  src: url(../assets/font/BarlowSemiCondensed-SemiBold.ttf);
+}
+
+.semi_bold {
+  font-family: 'SemiBold';
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
