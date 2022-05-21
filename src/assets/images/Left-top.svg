@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="525px" height="370px" viewBox="0 0 525 370" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Left-top</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="525" height="370"></rect>
+        <linearGradient x1="21.462032%" y1="52.0614448%" x2="98.1922138%" y2="52.6548509%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="21.462032%" y1="55.7590037%" x2="98.1922138%" y2="57.4167866%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="电脑端" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Left-top">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+            <rect id="Light" fill="url(#linearGradient-3)" opacity="0.8" mask="url(#mask-2)" transform="translate(168.693779, 9.234392) rotate(-21.000000) translate(-168.693779, -9.234392) " x="-39.3062212" y="-60.7656076" width="416" height="140"></rect>
+            <rect id="Light" fill="url(#linearGradient-3)" opacity="0.8" mask="url(#mask-2)" transform="translate(349.693779, -8.765608) rotate(-21.000000) translate(-349.693779, 8.765608) " x="141.693779" y="-78.7656076" width="416" height="140"></rect>
+            <rect id="Light" fill="url(#linearGradient-4)" opacity="0.8" mask="url(#mask-2)" transform="translate(2.550401, 229.045364) rotate(-120.000000) translate(-2.550401, -229.045364) " x="-197.449599" y="116.545364" width="400" height="225"></rect>
+        </g>
+    </g>
+</svg>
