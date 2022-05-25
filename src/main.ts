@@ -8,8 +8,8 @@ import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import ElementPlus from 'element-plus'
 import { setupRouter, setupRouterGuard } from '@/router'
 import { setupPinia } from '@/stores'
-
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import svgIcon from './icons/index.vue'
 
 
 /** 初始化应用 */
@@ -17,6 +17,7 @@ function setupApp (): void {
 
   // init application
   const app = createApp(App)
+  
 
   // use store
   setupPinia(app)
@@ -32,6 +33,8 @@ function setupApp (): void {
   // use UI { language： 中文, 组件尺寸： 小 }
   app.use(ElementPlus, { locale: zhCn,  })
   // app.use(ElementPlus, { locale: zhCn, size: 'small' })
+
+  app.component('svg-icon', svgIcon)
 
   // use elemntui svg
   useIcons(app)

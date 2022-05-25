@@ -5,6 +5,8 @@ import { useUserData } from '@/stores'
 import { respondState } from '@/enums'
 import { login, getCaptcha } from '@/API'
 import { ElMessage } from 'element-plus'
+
+
 /**
  * 登录逻辑
 */
@@ -12,13 +14,12 @@ export function useLogin () {
 
   const router = useRouter()
   const userInfo = useUserData()
-
+  const remember = ref<boolean>(false)
   const ruleFormRef = ref<FormInstance>()
   const userForm = reactive({
     name: 'test1',
     password: 'Test$123',
-    key: '',
-    captcha: ''
+    authentication: ''
   })
 
   const rules = {
@@ -28,8 +29,8 @@ export function useLogin () {
     password: [
       { required: true, message: '必须输入密码', trigger: 'blur' }
     ],
-    captcha: [
-      { required: true, message: '必须输入验证码', trigger: 'blur' }
+    authentication : [
+      { required: true, message: '请拖动滑块进行认证', trigger: 'blur' }
     ]
   }
 
@@ -48,34 +49,23 @@ export function useLogin () {
         type: 'success',
       })
     } else {
-      getCode()
-      userForm.captcha = ''
       ElMessage({
         showClose: true,
         message: msg,
         type: 'error',
       })
     }
-    
   }
 
-  const img = ref('')
-  const getCode = async () => {
-    let res = await getCaptcha({})
-    const { msg, code, data } = res
-    if (code === respondState.SUCCESS) {
-      const { img: imgUrl, key } = data.url
-      userForm.key = key
-      img.value = imgUrl
-    }
-  }
+  const statusChange = () => userForm.authentication = 'success'
+
 
   return {
     userForm,
     rules,
     ruleFormRef,
-    img,
-    getCode,
-    handleLogin
+    handleLogin,
+    remember,
+    statusChange
   }
 }

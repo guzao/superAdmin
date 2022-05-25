@@ -2,28 +2,28 @@
   <HeadreCard>
     <ul class="flex items-center justify-around height_full">
       <li class="text-center flex-1">
-        <div class="number_text">{{ collectData.b_num }}</div>
+        <div class="number_text semi_bold">{{ collectData.b_num }}</div>
         <div class="_label">设备数量(台)</div>
         <SplitLine />
       </li>
       <li class="text-center flex-1">
-        <div class="number_text">{{ collectData.off_line }}</div>
+        <div class="number_text semi_bold">{{ collectData.off_line }}</div>
         <div class="_label">离线设备(台)</div>
         <SplitLine />
       </li>
       <li class="text-center flex-1">
-        <div class="number_text">{{ collectData.err_num }}</div>
+        <div class="number_text semi_bold">{{ collectData.err_num }}</div>
         <div class="_label">异常设备(台)</div>
         <SplitLine />
       </li>
       <li class="text-center flex-1">
-        <div class="number_text">{{ collectData.charge }}</div>
-        <div class="_label">累计充电量(kW)</div>
+        <div class="number_text semi_bold">{{ collectData.charge }}</div>
+        <div class="_label">累计充电量(kWh)</div>
         <SplitLine />
       </li>
       <li class="text-center flex-1">
-        <div class="number_text">{{ collectData.discharge }}</div>
-        <div class="_label">累计放电量(kW)</div>
+        <div class="number_text semi_bold">{{ collectData.discharge }}</div>
+        <div class="_label">累计放电量(kWh)</div>
       </li>
     </ul>
   </HeadreCard>
@@ -46,16 +46,21 @@ li {
   position: relative;
 
   .number_text {
-    // font-size: $-g-fszier18;
-    font-size: 1.8vh;
     font-weight: 550;
+    // font-size: 18px;
+    // line-height: 22px;
+    // height: 22px;
+    // margin-bottom: 4px;
+    font-size: 1.8vh;
     line-height: 2.2vh;
     height: 2.2vh;
-    margin-bottom: 4px;
+    margin-bottom: 0.4vh;
   }
   ._label {
-    font-size: 1.2vh;
     color: $-g-black;
+    // font-size: 12px;
+    // height: 17px;
+    font-size: 1.2vh;
     height: 1.7vh;
   }
 }

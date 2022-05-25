@@ -1,7 +1,9 @@
 <template>
   <div class="app-contant">
     <HeaderCard> 告警事件 </HeaderCard>
-    <BodyCard>告警事件</BodyCard>
+    <BodyCard>
+      <svg-icon name="dashboard" color="red" />
+    </BodyCard>
   </div>
 </template>
 

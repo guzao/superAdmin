@@ -34,3 +34,37 @@ export function removeToken () {
   Cookies.remove(TOKEN)
 }
 
+
+
+/** 侧边栏状态 */
+const IS_COLLAPSE = 'IS_COLLAPSE'
+
+/** 
+ *  @isCollapse-侧边栏状态
+ * * 设置用户侧边栏状态
+ * * 存储在  Cookies 中
+*/
+export function setIsCollapse (isCollapse: any) {
+  Cookies.set(IS_COLLAPSE, isCollapse, {
+    expires: 360
+  })
+}
+
+
+/** 
+ * * 获取用户 侧边栏状态
+*/
+export function getIsCollapse () {
+  const isCollapse = Cookies.get(IS_COLLAPSE) as unknown
+  return isCollapse as boolean
+}
+
+
+/** 
+ * * 移除用户 侧边栏状态
+ * * 存储在  Cookies 中
+*/
+export function removeIsCollapse () {
+  Cookies.remove(IS_COLLAPSE)
+}
+

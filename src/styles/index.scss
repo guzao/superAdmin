@@ -11,8 +11,6 @@
   font-family: 'SemiBold';
 }
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -82,4 +80,8 @@
 /***/
 .cursor-pointer {
   cursor: pointer;
+}
+html {
+  min-width: 1280px;
+  min-height: 800px;
 }

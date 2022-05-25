@@ -1,8 +1,16 @@
 <template>
   <div class="_login">
-    <div class="hedare"></div>
+
+
 
     <div class="content">
+
+      <!-- logo -->
+      <div class="logo flex justify-center ">
+        <img src="../../../assets/images/logo.png" alt="">
+      </div>
+
+      <!-- 表单 -->
       <el-form
         ref="ruleFormRef"
         :model="userForm"
@@ -12,75 +20,89 @@
         class="demo-ruleForm"
       >
         <el-form-item prop="name">
-          <el-input
-            v-model="userForm.name"
-            :prefix-icon="UserFilled"
-            autocomplete="off"
-          />
+          <el-input v-model="userForm.name" autocomplete="off" />
         </el-form-item>
 
         <el-form-item prop="password">
-          <el-input
-            v-model="userForm.password"
-            :prefix-icon="Key"
-            type="password"
-            autocomplete="off"
-          >
-            <!-- <template #suffix>
-              <el-icon class="el-input__icon"><View /></el-icon>
-            </template> -->
+          <el-input v-model="userForm.password" type="password" autocomplete="off">
+            <template #suffix>
+              <el-icon class="el-input__icon cursor-pointer">
+                <View />
+              </el-icon>
+            </template>
           </el-input>
         </el-form-item>
 
-        <el-form-item prop="captcha">
-          <div class="d-f">
-            <el-input
-              v-model="userForm.captcha"
-              :prefix-icon="CreditCard"
-              autocomplete="off"
-            />
-            <img :src="img" style="width: 40%" alt="" />
-          </div>
+        <el-form-item prop="authentication">
+          <SliderVerification @status-change="statusChange"  />
+        </el-form-item>
+
+
+        <el-form-item >
+          <el-checkbox v-model="remember"  fill="pink" size="large" > 
+            <span> 记住密码 </span>
+          </el-checkbox>
         </el-form-item>
 
         <el-form-item>
-          <el-button @click="handleLogin" color="#626aef" style="width: 100%">
+          <el-button @click="handleLogin" color="rgba(216,34,44,1)" style="width: 100%">
             登录
           </el-button>
         </el-form-item>
       </el-form>
+
     </div>
 
-    <div class="footer"></div>
+    <!-- 页脚 -->
+    <div class="footer">版权所有 &#169 2022 南京零探智能科技有限公司 保留所有权利 · 苏ICP备20008705号-1 · 苏公网安备 12345678901234号</div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { onMounted } from "vue";
-import { UserFilled, Key, View, CreditCard } from "@element-plus/icons-vue";
+import { View } from "@element-plus/icons-vue";
+import SliderVerification from '@/components/common/SliderVerification.vue'
 import { useLogin } from "./index";
 
-const { getCode, handleLogin, userForm, rules, ruleFormRef, img } = useLogin();
-onMounted(() => {
-  getCode();
-});
+const {  handleLogin, userForm, rules, ruleFormRef, remember, statusChange } = useLogin();
+
+
+onMounted(() => {});
 </script>
 
 <style lang="scss" scoped>
 ._login {
   height: 100vh;
-  background-image: url(https://smartops.shanghai-electric.com/assets/img/login_bg.e008ae04.png);
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat;
-
+  background: linear-gradient(135deg, #e8e8e8, #f2f2f2);
   .content {
-    width: 360px;
+    width: 400px;
     top: 50%;
     left: 50%;
-    height: 60vh;
+    // height: 380px;
     position: absolute;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.02);
+    padding: 49px 30px 34px 30px;
+    box-sizing: border-box;
+    .logo {
+      height: 26px;
+      margin-bottom: 49px;
+      img {
+        height: 26px;
+      }
+    }
+  }
+
+
+  .footer {
+    position: fixed;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    color: rgba(0,0,0,0.50);
+    line-height: 17px;
   }
 }
 </style>

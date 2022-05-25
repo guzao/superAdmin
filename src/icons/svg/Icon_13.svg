@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="5px" viewBox="0 0 9 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon</title>
+    <g id="电脑端" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="总览-点位聚合" transform="translate(-1082.000000, -224.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="Map" transform="translate(206.000000, 150.000000)">
+                <g id="List" transform="translate(744.000000, 16.000000)">
+                    <g id="Button" transform="translate(0.000000, 40.000000)">
+                        <g transform="translate(132.000000, 12.000000)" id="Icon">
+                            <polygon transform="translate(4.500000, 8.500000) rotate(-270.000000) translate(-4.500000, -8.500000) " points="2 11.7143101 5.12499891 8.50001327 2 5.28571646 2.62499978 4 7 8.50001327 2.62499978 13"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

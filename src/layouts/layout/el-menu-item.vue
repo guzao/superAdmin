@@ -5,22 +5,26 @@
     :index="menuList.children[0].path"
   >
     <el-icon><DataAnalysis /></el-icon>
-    <span>{{ menuList.meta.title }}</span>
+    <span style="height: 36px; line-height: 36px; font-weight: 500">{{
+      menuList.meta.title
+    }}</span>
   </el-menu-item>
 
   <!-- 没有子级 -->
   <el-menu-item v-else-if="!menuList.children" :index="menuList.path">
-    <li class="flex flex-1 items-center">
+    <li style="height: 36px; line-height: 36px" class="flex flex-1 items-center">
       <i class="_point"></i>
-      <span>{{ menuList.meta.title }}</span>
+      <span style="font-weight: 500">{{ menuList.meta.title }}</span>
     </li>
   </el-menu-item>
 
   <!-- 多个子级 -->
-  <el-sub-menu v-else :index="menuList.path">
+  <el-sub-menu style="" v-else :index="menuList.path">
     <template #title>
       <el-icon> <location /></el-icon>
-      <span>{{ menuList.meta.title }}</span>
+      <span style="height: 36px; line-height: 36px; font-weight: 500">{{
+        menuList.meta.title
+      }}</span>
     </template>
     <elMenuItemVue
       v-for="(sunItem, index) in menuList.children"
@@ -33,8 +37,9 @@
 <script lang="ts">
 import { MenuType } from "@/types";
 import type { RouteRecordRaw } from "vue-router";
-import { defineComponent, PropType } from "vue";
-import { Menu as Setting, AlarmClock } from "@element-plus/icons-vue";
+import { defineComponent, PropType, computed } from "vue";
+import { useRoute } from "vue-router";
+import { useUserData } from "@/stores";
 export default defineComponent({
   name: "elMenuItemVue",
   props: {
@@ -46,9 +51,13 @@ export default defineComponent({
     },
   },
   setup() {
+    const route = useRoute();
+    const currentPath = computed(() => route.path);
+    const userData = useUserData();
     return {
-      Setting,
-      AlarmClock,
+      gh: 90,
+      currentPath,
+      userData,
     };
   },
 });

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="320px" viewBox="0 0 200 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Left-bottom</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="200" height="320"></rect>
+        <linearGradient x1="21.462032%" y1="53.5988712%" x2="98.1922138%" y2="54.6348399%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="电脑端" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="总览-点位聚合" transform="translate(0.000000, -480.000000)">
+            <g id="Left-bottom" transform="translate(0.000000, 480.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <rect id="Light" fill="url(#linearGradient-3)" opacity="0.800986154" mask="url(#mask-2)" transform="translate(18.550401, 257.950555) scale(-1, -1) rotate(-120.000000) translate(-18.550401, -257.950555) " x="-234.449599" y="145.450555" width="506" height="225"></rect>
+                <rect id="Light" fill="url(#linearGradient-3)" opacity="0.800986154" mask="url(#mask-2)" transform="translate(-17.449599, 311.950555) rotate(-120.000000) translate(17.449599, -311.950555) " x="-270.449599" y="199.450555" width="506" height="225"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

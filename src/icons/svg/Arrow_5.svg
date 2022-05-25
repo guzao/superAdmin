@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="4px" viewBox="0 0 8 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Arrow</title>
+    <g id="电脑端" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="总览-点位聚合" transform="translate(-1241.000000, -32.000000)" fill="#333333">
+            <g id="User" transform="translate(1126.000000, 16.000000)">
+                <polygon id="Arrow" transform="translate(119.000000, 18.000000) scale(1, -1) translate(-119.000000, -18.000000) " points="119 16 123 20 115 20"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

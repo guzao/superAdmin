@@ -1,7 +1,7 @@
 import { MenuType } from '@/types'
 import type { RouteRecordRaw } from 'vue-router';
 import { defineStore } from 'pinia'
-import { setToken, getToken, removeToken  } from '@/utils'
+import { setToken, getToken, removeToken, setIsCollapse, getIsCollapse, removeIsCollapse  } from '@/utils'
 import { getInfo, logout, getUserMenu } from '@/API'
 import { respondState } from '@/enums'
 import { ElMessage } from 'element-plus'
@@ -42,7 +42,7 @@ export const useUserData = defineStore('userData', {
     /** 用户菜单 */ 
     userMenu: [] as Array<MenuType>,
     /** 侧边栏状态 */ 
-    isCollapse: !false
+    isCollapse: false
   }),
 
   getters: {
@@ -73,7 +73,7 @@ export const useUserData = defineStore('userData', {
 
     /** 获取用户侧边栏状态 */
     getIsCollapse () : boolean {
-      return this.isCollapse
+      return this.isCollapse 
     }
 
     
@@ -153,11 +153,13 @@ export const useUserData = defineStore('userData', {
     */
     removeUserInfo (): void {
       removeToken()
+      // removeIsCollapse()
     },
 
     /** 设置用户侧边栏状态 */ 
     setIsCollapse () : void {
       this.isCollapse = !this.isCollapse
+      // setIsCollapse(this.isCollapse)
     }
 
 

@@ -2,13 +2,13 @@
   <div class="common-layout">
     <el-container>
       <!-- 顶部nav -->
-      <el-header style="height: 6.6vh">
-        <Header />
+      <el-header>
+        <MHeader />
       </el-header>
 
       <el-container>
         <!-- 侧边栏 -->
-        <Aside />
+        <MAside />
         <!-- 主路由 -->
         <el-main style="padding: 0 14px 16px 16px">
           <!-- 视图出口 -->
@@ -20,8 +20,8 @@
 </template>
 
 <script lang="ts" setup>
-import Header from "./layout/header.vue";
-import Aside from "./layout/aside.vue";
+import MHeader from "./layout/header.vue";
+import MAside from "./layout/aside.vue";
 </script>
 
 <style lang="scss" scoped>
@@ -37,6 +37,7 @@ import Aside from "./layout/aside.vue";
     height: 100vh;
     .el-header {
       padding: 0;
+      height: 6.6vh;
     }
   }
 }

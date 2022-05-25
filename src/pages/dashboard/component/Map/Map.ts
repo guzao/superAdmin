@@ -11,8 +11,6 @@ import { ElMessage } from 'element-plus';
 
 
 
-
-
 /** 高德地图类 */
 const AMap = window?.AMap;
 export class GDMap {
@@ -52,8 +50,8 @@ export class GDMap {
     this.markPonits = markerPointList.value.map((item) => {
       const { lat, long, name } = item
       return new AMap.Marker({
-        map: this.GDMapInstance,
-        position: new AMap.LngLat(lat, long),  
+        map: this.GDMapInstance, 
+        position: [ long, lat],  
         title: name,
       });
     })
@@ -78,7 +76,6 @@ export class GDMap {
   
 }
 
-/** 创建项目分布点类 */ 
 
 
 
