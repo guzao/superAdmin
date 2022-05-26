@@ -1,7 +1,13 @@
 <template>
-  <div id="app-container">工单统计 WorkOrderStatistics</div>
+  <div class="app-contant">
+    <HeaderCard> 工单统计 </HeaderCard>
+    <BodyCard> 工单统计 </BodyCard>
+  </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HeaderCard from "@/components/common/Header_card.vue";
+import BodyCard from "@/components/common/Body_card.vue";
+</script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped></style>

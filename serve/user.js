@@ -122,7 +122,7 @@ const userMenuData = [
         component: 'pages/dataReport/dataCurves/index.vue',
         name: 'dataCurves',
         meta: {
-          title: '历史曲线'
+          title: '数据曲线'
         }
       },
     ]

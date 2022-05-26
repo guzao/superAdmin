@@ -20,4 +20,4 @@ export const routerWhiteList =  ['/login', '/404'] as Array <string>
  *    ==> 新增的动态路由请在 @/router/routers/asyncRouters/index 文件 使用export * from './xxxxx' 方式导出
  * * 默认 开启动态路由
 */
-export const WhetherToOpenDynamicRouting: boolean = true
+export const WhetherToOpenDynamicRouting: boolean = !true

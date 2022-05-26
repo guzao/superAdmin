@@ -3,15 +3,24 @@
   <el-menu-item
     v-if="menuList.children && menuList.children.length == 1"
     :index="menuList.children[0].path"
+    :style="
+      !userData.isCollapse && currentPath == menuList.children[0].path
+        ? 'background-color: rgba(216, 34, 44, 1);; color: #fff; padding-left: 10px;'
+        : 'padding-left: 10px;'
+    "
   >
     <el-icon><DataAnalysis /></el-icon>
-    <span style="height: 36px; line-height: 36px; font-weight: 500">{{
-      menuList.meta.title
-    }}</span>
+    <span style="height: 36px; line-height: 36px; font-weight: 500">
+      {{ menuList.meta.title }}
+    </span>
   </el-menu-item>
 
   <!-- 没有子级 -->
-  <el-menu-item v-else-if="!menuList.children" :index="menuList.path">
+  <el-menu-item
+    style="min-width: 140px"
+    v-else-if="!menuList.children"
+    :index="menuList.path"
+  >
     <li style="height: 36px; line-height: 36px" class="flex flex-1 items-center">
       <i class="_point"></i>
       <span style="font-weight: 500">{{ menuList.meta.title }}</span>
@@ -22,9 +31,9 @@
   <el-sub-menu style="" v-else :index="menuList.path">
     <template #title>
       <el-icon> <location /></el-icon>
-      <span style="height: 36px; line-height: 36px; font-weight: 500">{{
-        menuList.meta.title
-      }}</span>
+      <span style="height: 36px; line-height: 36px; font-weight: 500">
+        {{ menuList.meta.title }}
+      </span>
     </template>
     <elMenuItemVue
       v-for="(sunItem, index) in menuList.children"

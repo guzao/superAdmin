@@ -1,6 +1,4 @@
 import type { RouteRecordRaw } from 'vue-router';
-import layout from '@/layouts/index.vue'
-import { dashboardRoute } from './asyncRouters/index'
 /**
  * 静态路由
 */

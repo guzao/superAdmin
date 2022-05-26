@@ -9,9 +9,6 @@ import { ElMessage } from 'element-plus';
 
 
 
-
-
-/** 高德地图类 */
 const AMap = window?.AMap;
 export class GDMap {
   /** 地图实例 */ 
@@ -20,20 +17,10 @@ export class GDMap {
   /** 实际生成的分布点 */
   public markPonits: Array<any> = []
   
-  constructor (container: string) {
-    this.initMap(container)
+  constructor (GDMapInstance: any) {
+    this.GDMapInstance = GDMapInstance
   }
 
-  /** 初始化地图 */ 
-  initMap (container: string): void {
-      this.GDMapInstance = new AMap.Map(container, {
-        zoom: 4.8,
-        mapStyle: "amap://styles/whitesmoke",
-        features: ["bg", "point", "road"],
-        center: [107.325777, 37.532983 ]
-      });
-      this.gdMapOnMounted()
-  }
 
   /** 地图初始化完成事件 */
   gdMapOnMounted (): Promise<unknown> {
@@ -73,17 +60,14 @@ export class GDMap {
   }
 
 
+
+  destroy () {
+    this.GDMapInstance.destroy()
+  }
+
   
 }
 
-
-
-
-/** 实例化地图 */
-export function useMap (container: string): GDMap{
-  const instanceMap = new GDMap(container)
-  return instanceMap
-}
 
 /** 地图数据 */
 export function useMapData () {
@@ -107,9 +91,12 @@ export function useMapData () {
   /** 项目、产品数据 */ 
   const markerPointList = ref<Array<MarkModel>>([])
 
+  /**地图加载loadin*/
+  const mapLoading = ref<boolean>(true)
 
   return {
     markerPointList,
+    mapLoading,
     getOverview
   }
 }

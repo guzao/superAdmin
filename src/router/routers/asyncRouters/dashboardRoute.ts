@@ -5,7 +5,7 @@ export const dashboardRoute: RouteRecordRaw = {
   path: '/',
   component: layout,
   meta: {
-    title: '数据总览'
+    title: '总览'
   },
   children: [
     {

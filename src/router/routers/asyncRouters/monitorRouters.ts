@@ -13,51 +13,19 @@ export const  monitorRouters: RouteRecordRaw = {
   },
   children: [
     {
-      path: '/monitor/index',
-      component: () => import('@/pages/monitor/monitor/index.vue'),
-      name: 'index',
+      path: '/monitor/projectInfo',
+      component: () => import('@/pages/monitor/projectInfo/index.vue'),
+      name: 'projectInfo',
       meta: {
-        title: '电站信息概览',
+        title: '项目信息',
       }
     },
     {
-      path: '/monitor/subSite',
-      component: () => import('@/pages/monitor/subSite/index.vue'),
-      name: 'subSite',
+      path: '/monitor/productInfo',
+      component: () => import('@/pages/monitor/productInfo/index.vue'),
+      name: 'productInfo',
       meta: {
-        title: '设备信息详情',
-      }
-    },
-    {
-      path: '/monitor/reportAlarm',
-      component: () => import('@/pages/monitor/reportAlarm/index.vue'),
-      name: 'reportAlarm',
-      meta: {
-        title: '告警事件查看',
-      }
-    },
-    {
-      path: '/monitor/historicalCurve',
-      component: () => import('@/pages/monitor/historicalCurve/index.vue'),
-      name: 'historicalCurve',
-      meta: {
-        title: '历史曲线查询',
-      }
-    },
-    {
-      path: '/monitor/KeyDataReport',
-      component: () => import('@/pages/monitor/KeyDataReport/index.vue'),
-      name: 'KeyDataReport',
-      meta: {
-        title: '关键数据报表',
-      }
-    },
-    {
-      path: '/monitor/ElectricityStatisticsBill',
-      component: () => import('@/pages/monitor/ElectricityStatisticsBill/index.vue'),
-      name: 'ElectricityStatisticsBill',
-      meta: {
-        title: '电量统计账单',
+        title: '设备信息',
       }
     },
   ]

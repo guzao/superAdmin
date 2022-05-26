@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1281px" height="800px" viewBox="0 0 1281 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Left-top</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1281" height="800"></rect>
+        <linearGradient x1="21.462032%" y1="52.0629271%" x2="98.1922138%" y2="52.65676%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="21.462032%" y1="52.0629289%" x2="98.1922138%" y2="52.6567623%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="21.462032%" y1="55.7590037%" x2="98.1922138%" y2="57.4167866%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="电脑端备份" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Left-top">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+            <polygon id="Light" fill="url(#linearGradient-3)" opacity="0.8" mask="url(#mask-2)" transform="translate(411.612711, 22.536909) rotate(-21.000000) translate(-411.612711, -22.536909) " points="-95.9089672 -148.258414 919.159912 -148.333646 919.134593 193.332311 -95.9342857 193.407543"></polygon>
+            <polygon id="Light" fill="url(#linearGradient-4)" opacity="0.8" mask="url(#mask-2)" transform="translate(853.252820, -21.392821) rotate(-21.000000) translate(-853.252820, 21.392821) " points="345.73104 -192.188183 1360.79992 -192.263415 1360.7746 149.402542 345.705722 149.477774"></polygon>
+            <polygon id="Light" fill="url(#linearGradient-5)" opacity="0.8" mask="url(#mask-2)" transform="translate(6.224358, 558.994495) rotate(-120.000000) translate(-6.224358, -558.994495) " points="-481.882366 284.431287 494.279796 284.524911 494.33246 833.555316 -481.829702 833.461692"></polygon>
+        </g>
+    </g>
+</svg>

@@ -1,31 +1,35 @@
 <template>
-  <div id="container"></div>
+  <div v-loading="mapLoading" id="container"></div>
 </template>
 
 <script lang="ts" setup>
-import { onMounted, onUnmounted } from "vue";
-import { useMap, GDMap, useMapData } from "./Map";
+import { onMounted, onBeforeUnmount } from "vue";
+import { GDMap, useMapData } from "./Map";
+const { markerPointList, getOverview, mapLoading } = useMapData();
+const AMap = window?.AMap;
 let Map: GDMap;
-const { markerPointList, getOverview } = useMapData();
+
+/** 初始化地图 */
+function initMap(container: string): void {
+  Map = new GDMap(
+    new AMap.Map(container, {
+      zoom: 4.8,
+      mapStyle: "amap://styles/whitesmoke",
+      features: ["bg", "point", "road"],
+      center: [107.325777, 37.532983],
+    })
+  );
+  Map.gdMapOnMounted().then((res) => {
+    mapLoading.value = false;
+  });
+}
 
 onMounted(() => {
-  const Map = useMap("container");
-  Map.gdMapOnMounted().then((res) => {
-    getOverview().then((res) => {
-      Map.addMarkPoints(markerPointList);
-    });
-
-    Map.gdMapZoomEvent((zoom: number, e: any) => {
-      console.log(zoom);
-      getOverview().then((res) => {
-        Map.addMarkPoints(markerPointList);
-      });
-    });
-  });
+  initMap("container");
 });
 
-onUnmounted(() => {
-  console.log(Map);
+onBeforeUnmount(() => {
+  Map.destroy();
 });
 </script>
 

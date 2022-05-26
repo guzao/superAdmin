@@ -7,7 +7,7 @@ import { respondState } from '@/enums'
 import { ElMessage } from 'element-plus'
 import { WhetherToOpenDynamicRouting } from '@/appConfig'
 import { basicRoutes } from "@/router/routers/constantRouter"
-import { dashboardRoute } from "@/router/routers/asyncRouters"
+import { dashboardRoute, monitorRouters, reportRoutes, OperationRouter, dataAnalysisRoutes } from "@/router/routers/asyncRouters"
 
 /** 用户信息 */
 type info = {
@@ -68,14 +68,13 @@ export const useUserData = defineStore('userData', {
     getUserMenu (): Array<MenuType | RouteRecordRaw > {
       return WhetherToOpenDynamicRouting  
       ? this.userMenu
-      : [ dashboardRoute ]
+      : [ dashboardRoute, monitorRouters,  OperationRouter ]
     },
 
     /** 获取用户侧边栏状态 */
     getIsCollapse () : boolean {
       return this.isCollapse 
     }
-
     
   },
 
@@ -136,11 +135,7 @@ export const useUserData = defineStore('userData', {
             this.removeUserInfo()
             location.reload()
           } else {
-            ElMessage({
-              showClose: true,
-              message: msg,
-              type: 'error',
-            })
+            ElMessage.error(msg)
           }
 
         })
@@ -153,7 +148,7 @@ export const useUserData = defineStore('userData', {
     */
     removeUserInfo (): void {
       removeToken()
-      // removeIsCollapse()
+      removeIsCollapse()
     },
 
     /** 设置用户侧边栏状态 */ 

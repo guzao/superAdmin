@@ -1,7 +1,7 @@
 <template>
   <div class="_login">
 
-
+    <div class="left_bgc"></div>
 
     <div class="content">
 
@@ -44,11 +44,10 @@
           </el-checkbox>
         </el-form-item>
 
-        <el-form-item>
-          <el-button @click="handleLogin" color="rgba(216,34,44,1)" style="width: 100%">
-            登录
-          </el-button>
-        </el-form-item>
+
+        <el-button @click="handleLogin" color="rgba(216,34,44,1)" style="width: 100%">
+          登录
+        </el-button>
       </el-form>
 
     </div>
@@ -73,7 +72,10 @@ onMounted(() => {});
 <style lang="scss" scoped>
 ._login {
   height: 100vh;
-  background: linear-gradient(135deg, #e8e8e8, #f2f2f2);
+  background:  url(../../../assets/images/login_bgc.svg)  no-repeat ;
+  background-color: #f2f2f2;
+  background-size: cover;
+
   .content {
     width: 400px;
     top: 50%;

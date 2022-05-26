@@ -13,14 +13,13 @@
       <SizeBoxVue :block="false" width="16px" />
 
       <!-- 右侧操作部分 -->
-      <el-dropdown class="cursor-pointer" size="default" trigger="click">
+      <el-dropdown class="cursor-pointer" trigger="click">
         <el-button :icon="UserFilled" class="action_button_text" color="#fff">
           {{ user.userInfo.full_name }}
           <el-icon class="el-icon--right"><CaretBottom /></el-icon>
         </el-button>
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item>{{ user.userInfo.name }}</el-dropdown-item>
             <el-dropdown-item @click="userLoginOut">退出登录</el-dropdown-item>
           </el-dropdown-menu>
         </template>

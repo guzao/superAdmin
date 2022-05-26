@@ -14,7 +14,7 @@
         <div
           @click="setIsCollapse"
           :class="menuCloseClassName"
-          class="items-center flex cursor-pointer"
+          class="items-center flex cursor-pointer flex-1"
         >
           <el-icon><Expand /></el-icon>
           <span v-if="!IsCollapse" class="action_text"> 收起菜单 </span>
@@ -61,25 +61,26 @@ const menuCloseClassName = computed(() =>
   height: 36px !important;
   width: 36px !important;
 }
-
 .menu_close_action {
-  height: 40px;
+  height: 36px;
   color: #000 !important;
   border-radius: 6px !important;
-  margin-left: 16px;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+.menu_close_action:hover {
+  background-color: #ecf5ff;
 }
 .action_text {
   padding-left: 10px;
   box-sizing: border-box;
 }
-
 .menu_close_action_collapse:hover,
 .el-menu--collapse .el-menu-item:hover,
 .el-menu--collapse .el-sub-menu__title:hover {
   color: #fff;
-  background-color: rgba(216, 34, 44, 0.7);
+  background-color: rgba(216, 34, 44, 0.75);
 }
-
 .el-menu--collapse .el-menu-item.is-active {
   background: $-g-main-color;
   color: #fff;
@@ -91,32 +92,31 @@ const menuCloseClassName = computed(() =>
   width: 36px !important;
 }
 
+//========================================
+/* 展开菜单栏样式 */
+.el-sub-menu__title {
+  padding: 0 !important;
+}
+.el-menu .el-sub-menu__title,
+.el-menu .el-menu-item {
+  border-radius: 6px;
+  margin-bottom: 6px !important;
+  height: 36px !important;
+}
+
+.el-sub-menu__title .el-icon {
+  margin-left: 10px;
+}
+/* 侧边栏子级被选中父级的样式 */
+.el-menu .el-sub-menu.is-active > .el-sub-menu__title {
+  background: $-g-main-color;
+  color: #fff;
+}
 /* 侧边栏收起后子级被选中父级的样式 */
 .el-menu--collapse .el-sub-menu.is-active .el-sub-menu__title {
   background: $-g-main-color;
   color: #fff;
 }
-
-//===============
-/* 展开菜单栏样式 */
-// .el-sub-menu__title {
-//   padding: 0 !important;
-// }
-// .el-menu .el-sub-menu__title,
-// .el-menu .el-menu-item {
-//   border-radius: 6px;
-//   margin-bottom: 6px !important;
-//   height: 36px !important;
-// }
-
-// .el-sub-menu__title .el-icon {
-//   margin-left: 10px;
-// }
-// /* 侧边栏子级被选中父级的样式 */
-// .el-menu .el-sub-menu.is-active > .el-sub-menu__title {
-//   background: $-g-main-color;
-//   color: #fff;
-// }
 </style>
 <style lang="scss" scoped>
 .el-aside {
