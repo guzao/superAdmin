@@ -10,6 +10,7 @@ export const  monitorRouters: RouteRecordRaw = {
   component: layout,
   meta: {
     title: '信息监视',
+    icon: 'monitor_un_active'
   },
   children: [
     {
@@ -18,6 +19,7 @@ export const  monitorRouters: RouteRecordRaw = {
       name: 'projectInfo',
       meta: {
         title: '项目信息',
+
       }
     },
     {

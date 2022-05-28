@@ -6,6 +6,7 @@ export const  OperationRouter: RouteRecordRaw = {
   component: layout,
   meta: {
     title: '工单系统',
+    icon: 'monitor_un_active'
   },
   children: [
     {

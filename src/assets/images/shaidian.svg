@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon</title>
+    <g id="电脑端备份" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="总览-点位展开" transform="translate(-807.000000, -387.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Map" transform="translate(206.000000, 150.000000)">
+                <g id="Bubbles" transform="translate(220.000000, 72.000000)">
+                    <g id="Bubble" transform="translate(371.000000, 157.000000)">
+                        <path d="M12.8654877,15.0231089 L10.450495,15.0231089 C10.1351959,15.0231089 9.91769657,14.7152049 10.0298962,14.4279352 L12.429589,8.28273315 C12.4960529,8.11252194 12.6633414,8 12.8500377,8 L16.8994255,8 C17.2189245,8 17.4367239,8.31580649 17.3161242,8.60453966 L15.9188784,11.9505079 L18.5492705,11.9505079 C18.9361193,11.9505079 19.1425187,12.3953882 18.8873695,12.6789994 L12.438289,19.8483042 C12.1247899,20.1968914 11.5435417,19.894841 11.6651913,19.4465949 L12.8654877,15.0231089 Z" id="Icon"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

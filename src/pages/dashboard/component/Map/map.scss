@@ -1,0 +1,81 @@
+
+/**  项目point样式 */
+.product_box {
+  min-width: 41px;
+  display: block;
+  height: 27px;
+  user-select: none;
+  // background: #d8222c;
+  background: rgba(0,170,255,1);
+  border: 2px solid #ffffff;
+  border-radius: 14px;
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.20); 
+  font-weight: 600;
+  font-size: 12px;
+  box-sizing: border-box;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  &::after {
+    display: block;
+    content: ' ';
+    position: absolute;
+    height: 5px;
+    bottom: -14px;
+    width: 0px;                 
+    border: 7px solid #ffffff;
+    border-bottom-color: transparent; 
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+}
+
+
+/**  设备point样式 */
+.device_box {
+  min-width: 28px;
+  display: block;
+  height: 28px;
+  user-select: none;
+  background: rgba(0,175,76,1);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.20); 
+  font-weight: 600;
+  font-size: 12px;
+  box-sizing: border-box;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  &::after {
+    display: block;
+    content: ' ';
+    position: absolute;
+    height: 5px;
+    bottom: -14px;
+    width: 0px;                 
+    border: 7px solid #ffffff;
+    border-bottom-color: transparent; 
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+
+  &::before {
+    display: block;
+    content: ' ';
+    background-image: url(https://img02.mockplus.cn/idoc/sketch/2022-05-24/c59d1591-01ba-4004-81a9-837bc3fcd018.png);
+    // background-image: url(../../../../assets/images/shandian.png);
+    background-size: cover;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    width: 9px;
+    height: 12px;
+    bottom: -14px;
+  }
+}
+

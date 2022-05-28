@@ -10,6 +10,7 @@
     "
   >
     <el-icon><DataAnalysis /></el-icon>
+
     <span style="height: 36px; line-height: 36px; font-weight: 500">
       {{ menuList.meta.title }}
     </span>
@@ -17,12 +18,15 @@
 
   <!-- 没有子级 -->
   <el-menu-item
-    style="min-width: 140px"
+    style="min-width: 140px; padding: 20px"
     v-else-if="!menuList.children"
     :index="menuList.path"
   >
     <li style="height: 36px; line-height: 36px" class="flex flex-1 items-center">
-      <i class="_point"></i>
+      <i
+        class="_point"
+        :class="currentPath == menuList.path ? 'point_active_color' : ' '"
+      ></i>
       <span style="font-weight: 500">{{ menuList.meta.title }}</span>
     </li>
   </el-menu-item>
@@ -30,7 +34,10 @@
   <!-- 多个子级 -->
   <el-sub-menu style="" v-else :index="menuList.path">
     <template #title>
-      <el-icon> <location /></el-icon>
+      <el-icon>
+        <location />
+        <!-- <svg-icon name="report_active" /> -->
+      </el-icon>
       <span style="height: 36px; line-height: 36px; font-weight: 500">
         {{ menuList.meta.title }}
       </span>
@@ -79,10 +86,11 @@ export default defineComponent({
   height: 4px;
   width: 4px;
   border-radius: 50%;
+  background-color: rgba(51, 51, 51, 1);
+  margin-right: 16px;
 }
-
 .point_active_color {
-  background-color: red;
+  background-color: rgba(216, 34, 44, 1);
 }
 .point_color {
   background: #333333;

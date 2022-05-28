@@ -13,7 +13,8 @@ export type MenuType = {
   /** 路由信息 */
   meta: {
     /** 路由标题 */
-    title: string
+    title: string,
+    icon?: string
   },
   /** 子路由 */
   children?: Array<MenuType>

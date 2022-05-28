@@ -22,7 +22,7 @@ export function overview(data: { area?: string }): Promise<unknown> {
 
 
 /** 获取首页地图搜索信息  */
-export function indexSearch(data: { area?: string }): Promise<unknown> {
+export function indexSearch(data?: { key?: string, type?: string }): Promise<unknown> {
   return http({
     url: '/api/indexSearch',
     method: 'post',

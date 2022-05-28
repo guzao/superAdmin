@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="5px" height="9px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon</title>
+    <g id="电脑端备份" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="实时监测-项目信息" transform="translate(-1225.000000, -177.000000)" fill="#D8222C" fill-rule="nonzero">
+            <g id="Content" transform="translate(206.000000, 150.000000)">
+                <g id="Button" transform="translate(814.000000, 13.000000)">
+                    <g id="Item" transform="translate(133.000000, 10.000000)">
+                        <polygon id="Icon" points="72 11.7143101 75.1249989 8.50001327 72 5.28571646 72.6249998 4 77 8.50001327 72.6249998 13"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
