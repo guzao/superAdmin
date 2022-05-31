@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="14px" viewBox="0 0 10 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon</title>
+    <g id="电脑端备份" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="实时监测-设备详情-V1" transform="translate(-564.000000, -169.000000)" fill="#000000">
+            <g id="Group" transform="translate(206.000000, 150.000000)">
+                <g id="Icons" transform="translate(75.000000, 12.000000)">
+                    <g id="Item" transform="translate(270.000000, 0.000000)">
+                        <path d="M23,7 L23,21 L13,21 L13,7 L23,7 Z M20.7272727,12.6 C20.2251957,12.6 19.8181818,13.0070139 19.8181818,13.5090909 L19.8181818,13.5090909 L19.8181818,14.4909091 C19.8181818,14.9929861 20.2251957,15.4 20.7272727,15.4 C21.2293498,15.4 21.6363636,14.9929861 21.6363636,14.4909091 L21.6363636,14.4909091 L21.6363636,13.5090909 C21.6363636,13.0070139 21.2293498,12.6 20.7272727,12.6 Z" id="Icon"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
