@@ -2,7 +2,7 @@
   <div class="monitor_card p-5">
     <div class="monitor-top flex">
       <div class="title">设备监控</div>
-      <div :class="{'alarm-block': isAlarm }" class="state-block">
+      <div :class="{'alarm-block': }" class="state-block">
         <div class="state-icon alarm" />
         <div :class="{'alarm-describe': isAlarm }" class="describe">设备告警</div>
       </div>

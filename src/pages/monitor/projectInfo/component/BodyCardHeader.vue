@@ -1,5 +1,5 @@
 <template>
-  <div class="top flex justify-between">
+  <div class="top flex justify-between items-center">
     <div class="left_mark">项目连接图</div>
 
     <!-- 操作按钮 -->
@@ -28,10 +28,7 @@
 <script setup lang="ts">
 import { defineEmits } from "vue";
 const emits = defineEmits(["click"]);
-const buttonAction = (type: number) => {
-  console.log(type);
-  emits("click", type);
-};
+const buttonAction = (type: number) => emits("click", type)
 </script>
 
 <style lang="scss" scoped>

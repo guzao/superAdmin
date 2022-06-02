@@ -37,5 +37,7 @@ export type CardModel = {
   /** 地址 */ 
   addr?: string,
   /** 投运日期 */ 
-  run_time?: string | Date
+  run_time?: string | Date,
+  /** 项目code */
+  code?: string
 }

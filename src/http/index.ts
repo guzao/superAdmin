@@ -48,7 +48,6 @@ service.interceptors.response.use(
     // TODO
     // 接口返回的错误类型
     // 400 401 404 500 根据不同类型做特殊处理
-    
     // 响应状态正常处理
     return data
   },

@@ -47,10 +47,6 @@ li {
 
   .number_text {
     font-weight: 550;
-    // font-size: 18px;
-    // line-height: 22px;
-    // height: 22px;
-    // margin-bottom: 4px;
     font-size: 1.8vh;
     line-height: 2.2vh;
     height: 2.2vh;
@@ -58,8 +54,6 @@ li {
   }
   ._label {
     color: $-g-black;
-    // font-size: 12px;
-    // height: 17px;
     font-size: 1.2vh;
     height: 1.7vh;
   }

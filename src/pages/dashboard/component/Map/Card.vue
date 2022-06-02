@@ -39,10 +39,7 @@ const props = defineProps({
   },
 });
 const emeits = defineEmits(["cardClick"]);
-const cardClick = (item: any) => {
-  emeits("cardClick", item);
-  console.log(item);
-};
+const cardClick = (item: any) => emeits("cardClick", item);
 
 /** 文字 */
 const mapText = {

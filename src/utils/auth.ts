@@ -60,3 +60,53 @@ export function removeIsCollapse () {
   Cookies.remove(IS_COLLAPSE)
 }
 
+
+
+/**
+ *  用户当前查看的项目
+*/
+const USER_CURRENT_PROJECT_CODE = 'USER_CURRENT_PROJECT_CODE'
+
+/** 
+ * * 设置 用户当前查看的项目
+ * * 存储在  sessionStorage中
+*/
+export function setUserCurrentProjectCode (code: string): void {
+  sessionStorage.setItem(USER_CURRENT_PROJECT_CODE, code)
+}
+/** 
+ * * 获取 用户当前查看的项目 code 
+ * * 存储在  sessionStorage中
+*/
+export function getUserCurrentProjectCode (): string {
+  return sessionStorage.getItem(USER_CURRENT_PROJECT_CODE) as string
+}
+/** 删除 用户当前查看的项目 */
+export function removeUserCurrentProjectCode (): void {
+  sessionStorage.removeItem(USER_CURRENT_PROJECT_CODE)
+}
+
+
+/**
+ *  用户当前查看设备id
+*/
+const USER_CURRENT_DEVICE_CODE = 'USER_CURRENT_DEVICE_CODE'
+
+/** 
+ * * 设置 用户当前查看的设备id
+ * * 存储在  sessionStorage中
+*/
+export function setUserCurrentDeviceCode (code: string): void {
+  sessionStorage.setItem(USER_CURRENT_DEVICE_CODE, code)
+}
+/** 
+ * * 获取 用户当前查看设备id
+ * * 存储在  sessionStorage中
+*/
+export function getUserCurrentDeviceCode (): string {
+  return sessionStorage.getItem(USER_CURRENT_DEVICE_CODE) as string
+}
+/** 删除 用户当前查看设备id */
+export function removeUserCurrentDeviceCode (): void {
+  sessionStorage.removeItem(USER_CURRENT_DEVICE_CODE)
+}

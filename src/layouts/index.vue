@@ -35,6 +35,9 @@ import MAside from "./layout/aside.vue";
   background: linear-gradient(135deg, #e8e8e8, #f2f2f2);
   .el-container {
     height: 100vh;
+    // background: url(../assets/svgs/Left-top.svg) no-repeat;
+    // background-size: 40vw 37vh;
+
     .el-header {
       padding: 0;
       height: 6.6vh;

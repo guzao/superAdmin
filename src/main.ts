@@ -31,10 +31,10 @@ function setupApp (): void {
 
 
   // use UI { language： 中文, 组件尺寸： 小 }
+  // app.use(ElementPlus, { locale: zhCn,  })
   app.use(ElementPlus, { locale: zhCn,  })
-  // app.use(ElementPlus, { locale: zhCn, size: 'small' })
 
-  app.component('svg-icon', svgIcon)
+  // app.component('svg-icon', svgIcon)
 
   // use elemntui svg
   useIcons(app)

@@ -10,6 +10,10 @@
       <el-icon><ArrowLeftBold /></el-icon>
     </div>
 
+    <!-- 查询 -->
+
+    <SearchBox />
+
     <!-- 右侧底部缩放按钮 -->
     <div class="zoom_box cursor-pointer select-none">
       <div
@@ -25,10 +29,6 @@
         <el-icon><Minus /></el-icon>
       </div>
     </div>
-
-    <!-- 查询 -->
-
-    <SearchBox />
   </div>
 </template>
 

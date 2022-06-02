@@ -35,6 +35,9 @@ export function createPermissionGuard (router: Router) {
           // 获取用户数据
           await userIinfo.setUserInfo()
 
+          // 获取用户所属项目列表
+          await userIinfo.getUserProjectList()
+
           /** 是否开启动态路由 */
           if (WhetherToOpenDynamicRouting) {
             // 获取用户路由、侧边栏
