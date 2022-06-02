@@ -1,8 +1,8 @@
-import { MenuType } from '@/types'
+import { MenuType, ProjectList, respondBaseInfo } from '@/types'
 import type { RouteRecordRaw } from 'vue-router';
 import { defineStore } from 'pinia'
-import { setToken, getToken, removeToken, setIsCollapse, getIsCollapse, removeIsCollapse  } from '@/utils'
-import { getInfo, logout, getUserMenu } from '@/API'
+import { setToken, getToken, removeToken, setIsCollapse, getIsCollapse, removeIsCollapse, setUserCurrentProjectCode  } from '@/utils'
+import { getInfo, logout, getUserMenu, myProjectList } from '@/API'
 import { respondState } from '@/enums'
 import { ElMessage } from 'element-plus'
 import { WhetherToOpenDynamicRouting } from '@/appConfig'
@@ -42,7 +42,10 @@ export const useUserData = defineStore('userData', {
     /** 用户菜单 */ 
     userMenu: [] as Array<MenuType>,
     /** 侧边栏状态 */ 
-    isCollapse: false
+    isCollapse: false,
+
+    /** 用户拥有的项目列表 */
+    userProjectList: [] as Array<ProjectList>
   }),
 
   getters: {
@@ -74,6 +77,12 @@ export const useUserData = defineStore('userData', {
     /** 获取用户侧边栏状态 */
     getIsCollapse () : boolean {
       return this.isCollapse 
+    },
+
+    
+    /** 用户拥有的项目列表 */
+    getUserProjectLis (): Array<ProjectList> {
+      return this.userProjectList
     }
     
   },
@@ -108,6 +117,23 @@ export const useUserData = defineStore('userData', {
           this.routers = userMenu
           resolve(userMenu)
         })
+      })
+    },
+
+    /** 
+     * * 获取 并设置用户拥有的项目列表 
+     * * 以初始化需要查看的项目code ==》 setUserCurrentProjectCode
+    */
+    getUserProjectList () {
+      myProjectList({}).then(res => {
+        const { code, data, msg } = res as respondBaseInfo
+        if (code === respondState.SUCCESS) {
+          this.userProjectList = data
+          const code = this.userProjectList[0].code
+          setUserCurrentProjectCode(code)
+        } else {
+          ElMessage.error(msg)
+        }
       })
     },
 

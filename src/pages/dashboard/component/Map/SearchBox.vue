@@ -35,7 +35,7 @@
       <div v-show="isListOpen" class="list_card scrollbar">
         <div class="title">共找到{{ cardList.length }}个项目</div>
         <!-- 卡片 -->
-        <productCard :card-list="cardList" />
+        <productCard @card-click="pathJumpingDetection" :card-list="cardList" />
       </div>
     </el-collapse-transition>
 
@@ -54,7 +54,7 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, onMounted } from "vue";
+import { onMounted } from "vue";
 import productCard from "./Card.vue";
 import { userSearchBoxData } from "./SearchBox";
 const {
@@ -65,6 +65,7 @@ const {
   searchKey,
   isListOpenFilter,
   filterChange,
+  pathJumpingDetection,
 } = userSearchBoxData();
 
 const serachCardData = () => {

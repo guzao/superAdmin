@@ -1,14 +1,15 @@
 @import './variable.scss';
-
 @import '../pages//dashboard/component/Map/map.scss';
-
 @import './scrollbar.scss';
+@import './override.scss';
+
 
 @font-face {
   font-family: 'SemiBold';
   src: url(../assets/font/BarlowSemiCondensed-SemiBold.ttf);
 }
 
+// 数值字体
 .semi_bold {
   font-family: 'SemiBold';
 }
@@ -86,4 +87,6 @@
 html {
   min-width: 1280px;
   min-height: 800px;
+  overflow-y: hidden;
 }
+

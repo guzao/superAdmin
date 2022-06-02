@@ -16,7 +16,9 @@
       <el-dropdown class="cursor-pointer" trigger="click">
         <el-button :icon="UserFilled" class="action_button_text" color="#fff">
           {{ user.userInfo.full_name }}
-          <el-icon class="el-icon--right"><CaretBottom /></el-icon>
+          <el-icon class="el-icon--right">
+            <CaretBottom />
+          </el-icon>
         </el-button>
         <template #dropdown>
           <el-dropdown-menu>
@@ -40,7 +42,9 @@ const userLoginOut = () => user.loginOut();
 const toggleFullscreen = async () => {
   await toggle();
 };
-const screenText = computed(() => (isFullscreen.value ? "退出全屏" : "全屏模式"));
+const screenText = computed(() =>
+  isFullscreen.value ? "退出全屏" : "全屏模式"
+);
 </script>
 
 <style lang="scss" scoped>
@@ -50,6 +54,8 @@ const screenText = computed(() => (isFullscreen.value ? "退出全屏" : "全屏
   padding: 0 16px;
   box-sizing: border-box;
   .header_left {
+    position: relative;
+    z-index: 2;
     width: 176px;
     height: 20px;
     background: url(../../assets/images/logo.png) no-repeat;

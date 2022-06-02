@@ -1,65 +1,85 @@
 <template>
-  <div class="app-contant">
-    <Header_card :style="showSelectBox ? 'border-radius: 6px 6px 0 0':''">
-      <HeaderInfo :titleInfo="currentDeviceData" v-model:show-select-box="showSelectBox" />
-      <div class="device-card-box">
-        <DeviceCard :is-show="showSelectBox" @selected-product="selectedProduct" />
-      </div>
-    </Header_card>
-    <MonitorCard :monitorInfo="currentDeviceData" />
-    <ChartCard />
+  <div class="app-contant relative">
+    <HeaderCard :style="showSelectBox ? 'border-radius: 6px 6px 0 0;' : ''">
+      <ProductHeader :titleInfo="currentDeviceData" v-model="showSelectBox" />
+    </HeaderCard>
+
+    <div
+      v-loading="listLoading"
+      :style="showSelectBox ? 'opacity: 0.3' : '1'"
+      class="content_box flex flex-col justify-between box-border"
+    >
+      <HeaderCard class="flex flex-col justify-evenly" style="height: 13vh">
+        <!--  -->
+        <DeviceIconState :deviceState="deviceDataInfo" />
+
+        <!-- 设备详情 -->
+        <infoCard :cardData="currentDeviceData" />
+      </HeaderCard>
+
+      <HeaderCard class="chart_box flex-1 overflow-hidden" style="margin-bottom: 0">
+        <div id="chart_box"></div>
+      </HeaderCard>
+    </div>
+
+    <!-- 选择设备 -->
+    <SelectProduct
+      v-loading="listLoading"
+      :deviceData="deviceData"
+      :is-show="showSelectBox"
+      @on-select-product="getProductInfo"
+      @handle-current-change="handleCurrentChange"
+      @handle-size-change="handleSizeChange"
+      @on-search="onSearchList"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import DeviceCard from "./component/DeviceCard.vue";
-import HeaderInfo from "./component/HeaderInfo.vue";
-import MonitorCard from "./component/MonitorCard.vue";
-import ChartCard from "./component/ChartCard.vue";
-import Header_card from "@/components/common/Header_card.vue";
-import BodyCard from "@/components/common/Body_card.vue";
-let showSelectBox = ref(false);
-let currentDeviceData = {
-  id: 3,
-  order_num: 1,
-  product_id: 1,
-  address: "测试地址",
-  station_code: "NJ02",
-  start_time: "2022-05-06 11:19:32",
-  code_name: "南京",
-  customer: "大客户",
-  name: "型号1",
-  model: "m001",
-  specs: "DD",
-  number: "DD",
-  version: "DD",
-  time: "17天 ",
-  soc: "-- %",
-  soh: "-- %",
-  maxVolt: "-- V",
-  minVolt: "-- V",
-  maxTemp: "-- ℃",
-  minTemp: "-- ℃",
-  volt: "-- V",
-  current: "-- A",
-  accCharge: "-- kWh",
-  acaDischarge: "-- kWh",
-  concentration: "-- LEL",
-  activePower: "-- kW",
-  reactivePower: "-- kVar"
-};
-const selectedProduct = (item: object) => {
-  console.log("item");
-  console.log(item);
-  showSelectBox.value = false;
-  currentDeviceData = item;
-};
+import { onMounted } from "vue";
+import HeaderCard from "@/components/common/Header_card.vue";
+import ProductHeader from "./component/ProductHeader.vue";
+import SelectProduct from "./component/SelectProduct.vue";
+import infoCard from "./component/infoCard.vue";
+import DeviceIconState from "./component/DeviceIconState.vue";
+import { useDataAndAction } from "./useData";
+import { userEcharts } from "./useEcharts";
+
+const {
+  showSelectBox,
+  getProductList,
+  getProductInfo,
+  getMyProduct,
+  handleSizeChange,
+  handleCurrentChange,
+  onSearchList,
+  deviceDataInfo,
+  listLoading,
+  currentProjectCode,
+  currentDeviceCode,
+  currentDeviceData,
+  deviceData,
+} = useDataAndAction();
+const { renderLine } = userEcharts();
+
+onMounted(async () => {
+  await getProductList({ code: currentProjectCode.value });
+  await getMyProduct({
+    code: currentProjectCode.value,
+    order_num: currentDeviceCode.value,
+  });
+});
 </script>
 
 <style lang="scss" scoped>
-.device-card-box {
-  width: 100%;
-  position: relative;
+.content_box {
+  height: calc(100% - (6.9vh + 1.5vh));
+}
+.box-border {
+  transition: all 0.5s;
+}
+
+#chart_box {
+  height: 100%;
 }
 </style>
