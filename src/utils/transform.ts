@@ -68,3 +68,16 @@ export function transfromProductDataSignal (data: Array<DeviceList>) {
 function splittingSpaceToArray (value: string) {
   return value.split(' ')
 }
+
+
+
+
+/**
+ * * 日期转时间戳
+*/ 
+export function dateToTimestamp (date: Date) {
+  if (date instanceof Date) {
+    return +date / 1000
+  }
+  return new Error('params is not Date Object')
+}

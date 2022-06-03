@@ -84,7 +84,7 @@ export function userEcharts () {
 
   /** 执行渲染逻辑 */
   const renderLine = (container: HTMLElement, data: curveModel): ECharts => {
-    const echartsInstance: ECharts = Echarts.init(container)
+    const echartsInstance: ECharts = Echarts.init(document.getElementById('chart_box') as HTMLElement)
     echartsInstance.setOption(option, true)
     return echartsInstance
   }

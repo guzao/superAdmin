@@ -15,7 +15,13 @@
 
       <!-- 数据表格 -->
       <div id="table_box" class="table_box">
-        <el-table :data="billData.data" height="100% " id="use_table" style="width: 100%">
+        <el-table
+          :data="billData.data"
+          height="98%"
+          show-summary
+          id="use_table"
+          style="width: 100%"
+        >
           <el-table-column prop="time" label="日期" />
           <el-table-column prop="j_charge" label="尖充电量" />
           <el-table-column prop="f_charge" label="峰充电量" />

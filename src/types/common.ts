@@ -117,7 +117,6 @@ export type DeviceDataList = {
 }
 
 
-
 /** 告警列表数据模型 */
 export type AlarmListModel = {
   /** 告警名称 */

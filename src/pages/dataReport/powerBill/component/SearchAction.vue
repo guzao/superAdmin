@@ -50,7 +50,7 @@
             v-model="form.start_time"
             type="date"
           />
-          <span style="padding: 0 5px" v-if="form.type === 1"> - </span>
+          <span style="padding: 0 5px; color: #606266" v-if="form.type === 1"> - </span>
           <el-date-picker
             v-if="form.type === 1"
             style="width: 130px"
@@ -65,7 +65,7 @@
             v-model="form.start_time"
             type="month"
           />
-          <span style="padding: 0 5px" v-if="form.type === 2"> - </span>
+          <span style="padding: 0 5px; color: #606266" v-if="form.type === 2"> - </span>
           <el-date-picker
             v-if="form.type === 2"
             style="width: 130px"
@@ -80,7 +80,7 @@
             v-model="form.start_time"
             type="year"
           />
-          <span style="padding: 0 5px" v-if="form.type === 3"> - </span>
+          <span style="padding: 0 5px; color: #606266" v-if="form.type === 3"> - </span>
           <el-date-picker
             v-if="form.type === 3"
             style="width: 130px"
@@ -95,7 +95,7 @@
           </resettingButton>
           <themeButton style="margin-right: 6px" @click="search"> 查询 </themeButton>
           <div @click="download" class="download flex items-center cursor-pointer">
-            <el-icon class="el-icon--right"><Download /></el-icon>
+            <el-icon class="el-icon--right" style="color: #d8222c"><Download /></el-icon>
             <span class="downlod_text"> 下载账单 </span>
           </div>
         </el-form-item>
@@ -132,7 +132,6 @@ const search = () => {
     }
   });
 };
-// 类别 1 日 2月 3年
 const typeList = [
   { label: "日", id: 1 },
   { label: "月", id: 2 },
@@ -163,6 +162,7 @@ const download = () => emits("download");
     font-weight: 600;
     text-align: left;
     color: #d8222c;
+    margin-left: 4px;
   }
 }
 
