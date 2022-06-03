@@ -60,6 +60,11 @@ export function useDataAndAction () {
         deviceData.deviceList = deviceList
         transfromProductDataSignal(deviceData.deviceList)
         currentDeviceData.value = deviceList[0]
+        getMyProduct({
+          code: currentProjectCode.value,
+          order_num: currentDeviceCode.value,
+          sub_id: currentDeviceData.value?.sub_id as number,
+        });
       } else {
         ElMessage.error(msg)
       }
@@ -69,7 +74,7 @@ export function useDataAndAction () {
   }
 
   /** 获取PC产品信息   (单个设备)*/
-  function getMyProduct (data: { code: string, order_num: number}) {
+  function getMyProduct (data: { code: string, order_num: number, sub_id: number }) {
     listLoading.value = true
     myProduct(data).then(res => {
       const { code, data, msg } = res as respondBaseInfo
@@ -100,7 +105,7 @@ export function useDataAndAction () {
     currentDeviceCode.value = value
     currentDeviceData.value = deviceData.deviceList.find(item => item.order_num == value) as DeviceList
     showSelectBox.value = false
-    getMyProduct({ code: currentProjectCode.value, order_num: value })
+    getMyProduct({ code: currentProjectCode.value, order_num: value, sub_id: currentDeviceData.value.sub_id })
   }
 
   /** 设备筛选事件 */
@@ -121,7 +126,6 @@ export function useDataAndAction () {
   /** 卸载事件 */
   onBeforeUnmount(() => {
     window.removeEventListener('resize', resize)
-    echartsInstance.dispose()
   })
 
   return {

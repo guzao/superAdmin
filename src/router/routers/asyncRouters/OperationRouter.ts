@@ -17,14 +17,14 @@ export const  OperationRouter: RouteRecordRaw = {
         title: '电量账单' 
       },
     },
-    {
-      path: '/report/statisticalReport',
-      component: () => import('@/pages/dataReport/statisticalReport/index.vue'),
-      name: 'statisticalReport',
-      meta: {
-        title: '统计报表' 
-      },
-    },
+    // {
+    //   path: '/report/statisticalReport',
+    //   component: () => import('@/pages/dataReport/statisticalReport/index.vue'),
+    //   name: 'statisticalReport',
+    //   meta: {
+    //     title: '统计报表' 
+    //   },
+    // },
     {
       path: '/report/alarmEvents',
       component: () => import('@/pages/dataReport/alarmEvents/index.vue'),

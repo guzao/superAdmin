@@ -104,7 +104,9 @@ export type DeviceList = {
   reactivePower:	string,
   reactivePowerSignal?:	string,
   /** 异常状态 */ 
-  err_state: number
+  err_state: number,
+  /**  */
+  sub_id: number
 }
 
 /** 项目设备列表数据模型 */

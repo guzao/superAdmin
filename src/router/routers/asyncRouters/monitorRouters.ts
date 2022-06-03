@@ -9,7 +9,7 @@ export const  monitorRouters: RouteRecordRaw = {
   path: '/monitor',
   component: layout,
   meta: {
-    title: '信息监视',
+    title: '实时监测',
     icon: 'monitor_un_active'
   },
   children: [

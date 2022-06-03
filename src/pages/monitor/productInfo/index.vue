@@ -1,7 +1,11 @@
 <template>
   <div class="app-contant relative">
     <HeaderCard :style="showSelectBox ? 'border-radius: 6px 6px 0 0;' : ''">
-      <ProductHeader :titleInfo="currentDeviceData" v-model="showSelectBox" />
+      <ProductHeader
+        v-loading="listLoading"
+        :titleInfo="currentDeviceData"
+        v-model="showSelectBox"
+      />
     </HeaderCard>
 
     <div
@@ -49,14 +53,12 @@ const {
   showSelectBox,
   getProductList,
   getProductInfo,
-  getMyProduct,
   handleSizeChange,
   handleCurrentChange,
   onSearchList,
   deviceDataInfo,
   listLoading,
   currentProjectCode,
-  currentDeviceCode,
   currentDeviceData,
   deviceData,
 } = useDataAndAction();
@@ -64,10 +66,6 @@ const { renderLine } = userEcharts();
 
 onMounted(async () => {
   await getProductList({ code: currentProjectCode.value });
-  await getMyProduct({
-    code: currentProjectCode.value,
-    order_num: currentDeviceCode.value,
-  });
 });
 </script>
 

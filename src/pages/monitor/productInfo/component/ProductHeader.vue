@@ -35,7 +35,7 @@
         </div>
         <div class="info_item text-center relative">
           <div class="info_item_value semi_bold">
-            {{ titleInfo?.maxVolt }}/{{ titleInfo?.minVolt }}
+            {{ titleInfo?.minVolt }}/{{ titleInfo?.maxVolt }}
           </div>
           <div class="info_item_label">最低/最高电压({{ titleInfo?.minTempSignal }})</div>
           <SplitLine />

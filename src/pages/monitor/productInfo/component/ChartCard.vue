@@ -34,26 +34,24 @@ onMounted(() => {
     80,
     180,
     280,
-    380
+    380,
   ];
   //需要获取到element,所以是onMounted的Hook
-  let myChart = echarts.init(
-    document.getElementById("powerCurve") as HTMLElement
-  );
+  let myChart = echarts.init(document.getElementById("powerCurve") as HTMLElement);
   // 绘制图表
   myChart.setOption({
     tooltip: {
       confine: true,
       trigger: "axis",
-      position: function(pt: Array<any>) {
+      position: function (pt: Array<any>) {
         return [pt[0], "10%"];
-      }
+      },
     },
     grid: {
       x: 30,
       y: 30,
       x2: 30,
-      y2: 70
+      y2: 70,
     },
     xAxis: {
       type: "category",
@@ -82,23 +80,23 @@ onMounted(() => {
         "21:00",
         "22:00",
         "23:00",
-        "24:00"
-      ]
+        "24:00",
+      ],
     },
     yAxis: {
       type: "value",
-      boundaryGap: [0, "50%"]
+      boundaryGap: [0, "50%"],
     },
     dataZoom: [
       {
         type: "inside",
         start: 0,
-        end: 30
+        end: 30,
       },
       {
         start: 0,
-        end: 30
-      }
+        end: 30,
+      },
     ],
     series: [
       {
@@ -108,25 +106,25 @@ onMounted(() => {
         symbol: "none",
         sampling: "lttb",
         itemStyle: {
-          color: "#D8222C"
+          color: "#D8222C",
         },
         areaStyle: {
           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
             {
               offset: 0,
-              color: "#E3646B"
+              color: "#E3646B",
             },
             {
               offset: 1,
-              color: "#F9DBDC"
-            }
-          ])
+              color: "#F9DBDC",
+            },
+          ]),
         },
-        data: data
-      }
-    ]
+        data: data,
+      },
+    ],
   });
-  window.onresize = function() {
+  window.onresize = function () {
     //自适应大小
     myChart.resize();
   };

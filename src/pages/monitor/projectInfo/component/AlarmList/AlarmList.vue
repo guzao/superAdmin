@@ -78,9 +78,9 @@ const pagination = reactive({
 });
 const lv = ref<string>("");
 const alarmType = [
-  { label: "一级故障", value: 1 },
-  { label: "二级故障", value: 2 },
   { label: " 三级故障", value: 3 },
+  { label: "二级故障", value: 2 },
+  { label: "一级故障", value: 1 },
 ];
 const handleSizeChange = (szie: number) => {
   initParams();

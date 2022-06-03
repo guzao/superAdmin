@@ -15,9 +15,9 @@ defineProps({
 });
 
 const alarmTypeLevelColorMap = {
-  一级故障: "alarm_type_tag1",
+  一级故障: "alarm_type_tag3",
   二级故障: "alarm_type_tag2",
-  三级故障: "alarm_type_tag3",
+  三级故障: "alarm_type_tag1",
 };
 </script>
 
@@ -50,7 +50,7 @@ const alarmTypeLevelColorMap = {
 .alarm_type_tag3 {
   width: 65px;
   height: 22px;
-  background: rgba(216, 34, 44, 0.1);
+  background: rgba(216, 34, 44, 0.3);
   border-radius: 2px;
   font-size: 12px;
   font-weight: 400;
