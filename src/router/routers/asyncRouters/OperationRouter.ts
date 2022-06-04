@@ -1,7 +1,7 @@
 import type { RouteRecordRaw } from 'vue-router';
 import layout from '@/layouts/index.vue'
 
-export const  OperationRouter: RouteRecordRaw = {
+export const OperationRouter: RouteRecordRaw = {
   path: '/report',
   component: layout,
   meta: {
@@ -14,17 +14,17 @@ export const  OperationRouter: RouteRecordRaw = {
       component: () => import('@/pages/dataReport/powerBill/index.vue'),
       name: 'powerBill',
       meta: {
-        title: '电量账单' 
+        title: '电量账单'
       },
     },
-    // {
-    //   path: '/report/statisticalReport',
-    //   component: () => import('@/pages/dataReport/statisticalReport/index.vue'),
-    //   name: 'statisticalReport',
-    //   meta: {
-    //     title: '统计报表' 
-    //   },
-    // },
+    {
+      path: '/report/statisticalReport',
+      component: () => import('@/pages/dataReport/statisticalReport/index.vue'),
+      name: 'statisticalReport',
+      meta: {
+        title: '统计报表'
+      },
+    },
     {
       path: '/report/alarmEvents',
       component: () => import('@/pages/dataReport/alarmEvents/index.vue'),
