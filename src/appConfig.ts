@@ -2,14 +2,14 @@
  * 页面请求不用携带TOKEN白名单
  * @ 以/开头 例 '/login'
 */
-export const whiteList =  ['/login', '/api/captcha'] as Array <string>
+export const whiteList = ['/login', '/api/captcha'] as Array<string>
 
 
 /**
  * 页面白名单
  * @ 以/开头 例 '/login'
 */
-export const routerWhiteList =  ['/login', '/404'] as Array <string>
+export const routerWhiteList = ['/login', '/404'] as Array<string>
 
 
 /**
@@ -20,4 +20,4 @@ export const routerWhiteList =  ['/login', '/404'] as Array <string>
  *    ==> 新增的动态路由请在 @/router/routers/asyncRouters/index 文件 使用export * from './xxxxx' 方式导出
  * * 默认 开启动态路由
 */
-export const WhetherToOpenDynamicRouting: boolean = !true
+export const WhetherToOpenDynamicRouting: boolean = true
