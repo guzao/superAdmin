@@ -11,10 +11,16 @@
   >
     <!-- <el-icon><DataAnalysis /></el-icon> -->
     <svg-icon
-      :icon-class="currentPath == menuList.children[0].path ? menuList.meta.icon + '-white' : menuList.meta.icon"
-      style="width: 14px; height: 14px;margin:10px;"
+      :icon-class="
+        currentPath == menuList.children[0].path
+          ? menuList.meta.icon + '-white'
+          : menuList.meta.icon
+      "
+      style="width: 14px; height: 14px; margin: 10px"
     ></svg-icon>
-    <span style="height: 36px; line-height: 36px; font-weight: 500">{{ menuList.meta.title }}</span>
+    <span style="height: 36px; line-height: 36px; font-weight: 500">{{
+      menuList.meta.title
+    }}</span>
   </el-menu-item>
 
   <!-- 没有子级 -->
@@ -24,7 +30,10 @@
     :index="menuList.path"
   >
     <li style="height: 36px; line-height: 36px" class="flex flex-1 items-center">
-      <i class="_point" :class="currentPath == menuList.path ? 'point_active_color' : ' '"></i>
+      <i
+        class="_point"
+        :class="currentPath == menuList.path ? 'point_active_color' : ' '"
+      ></i>
       <span style="font-weight: 500">{{ menuList.meta.title }}</span>
     </li>
   </el-menu-item>
@@ -33,12 +42,22 @@
   <el-sub-menu style v-else :index="menuList.path">
     <template #title>
       <svg-icon
-        :icon-class="currentPath == menuList.children[0].path ? menuList.meta.icon + '-white' : menuList.meta.icon"
-        style="width: 14px; height: 14px;margin:10px;"
+        :icon-class="
+          currentPath.includes(menuList.path)
+            ? menuList.meta.icon + '-white'
+            : menuList.meta.icon
+        "
+        style="width: 14px; height: 14px; margin: 10px"
       ></svg-icon>
-      <span style="height: 36px; line-height: 36px; font-weight: 500">{{ menuList.meta.title }}</span>
+      <span style="height: 36px; line-height: 36px; font-weight: 500">{{
+        menuList.meta.title
+      }}</span>
     </template>
-    <elMenuItemVue v-for="(sunItem, index) in menuList.children" :key="index" :menuList="sunItem" />
+    <elMenuItemVue
+      v-for="(sunItem, index) in menuList.children"
+      :key="index"
+      :menuList="sunItem"
+    />
   </el-sub-menu>
 </template>
 
