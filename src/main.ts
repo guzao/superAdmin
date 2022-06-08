@@ -10,19 +10,21 @@ import { setupRouter, setupRouterGuard } from '@/router'
 import { setupPinia } from '@/stores'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import svgIcon from './icons/index.vue'
-
+import 'virtual:svg-icons-register' // 引入注册脚本
+import SvgIcon from '@/components/svgIcon/index.vue' // 引入组件
 
 /** 初始化应用 */
-function setupApp (): void {
+function setupApp(): void {
 
   // init application
   const app = createApp(App)
-  
+
+
 
   // use store
   setupPinia(app)
 
-  
+
   // init router 
   const router = setupRouter(app)
 
@@ -32,8 +34,9 @@ function setupApp (): void {
 
   // use UI { language： 中文, 组件尺寸： 小 }
   // app.use(ElementPlus, { locale: zhCn,  })
-  app.use(ElementPlus, { locale: zhCn,  })
+  app.use(ElementPlus, { locale: zhCn, })
 
+  app.component('svg-icon', SvgIcon)
   // app.component('svg-icon', svgIcon)
 
   // use elemntui svg
@@ -49,7 +52,7 @@ function setupApp (): void {
 setupApp()
 
 /** 注册elemntui svg */
-function useIcons (app: any) : void {
+function useIcons(app: any): void {
   for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
     app.component(key, component)
   }

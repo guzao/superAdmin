@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="13px" viewBox="0 0 14 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon</title>
+    <g id="电脑端备份" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="实时监测-项目信息" transform="translate(-27.000000, -117.000000)" fill="#FFFFFF">
+            <g id="Sidebar" transform="translate(16.000000, 63.000000)">
+                <g id="Item" transform="translate(0.000000, 40.000000)">
+                    <g id="Content" transform="translate(0.000000, 3.000000)">
+                        <g id="Icon" transform="translate(4.000000, 3.000000)">
+                            <path d="M18.25,18.75 L18.25,20.25 L9.75,20.25 L9.75,18.75 L18.25,18.75 Z M21,8 L21,18 L7,18 L7,8 L21,8 Z M12.1666667,12.8503737 L10.5,12.8503737 L10.5,15.5 L12.1666667,15.5 L12.1666667,12.8503737 Z M14.8333333,11.6751869 L13.1666667,11.6751869 L13.1666667,15.4945442 L14.8333333,15.4945442 L14.8333333,11.6751869 Z M17.5,10.5 L15.8333333,10.5 L15.8333333,15.4945442 L17.5,15.4945442 L17.5,10.5 Z"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

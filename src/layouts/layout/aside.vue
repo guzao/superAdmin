@@ -12,12 +12,22 @@
         <elMenuItemVue v-for="item in userMenu" :menuList="item" />
         <!-- 自定义折叠菜单栏按钮 -->
         <div
+          v-if="!IsCollapse"
           @click="setIsCollapse"
           :class="menuCloseClassName"
           class="items-center flex cursor-pointer flex-1"
         >
-          <el-icon><Expand /></el-icon>
-          <span v-if="!IsCollapse" class="action_text"> 收起菜单 </span>
+          <svg-icon icon-class="retract" style="width: 14px; height: 14px;"></svg-icon>
+          <span v-if="!IsCollapse" class="action_text">收起菜单</span>
+        </div>
+        <div
+          v-else
+          @click="setIsCollapse"
+          :class="menuCloseClassName"
+          class="items-center flex cursor-pointer flex-1"
+        >
+          <svg-icon icon-class="open" style="width: 14px; height: 14px;"></svg-icon>
+          <span v-if="!IsCollapse" class="action_text">展开菜单</span>
         </div>
       </el-menu>
     </el-scrollbar>
@@ -30,7 +40,9 @@ import { useRoute } from "vue-router";
 import elMenuItemVue from "./el-menu-item.vue";
 import { storeToRefs } from "pinia";
 import { useUserData } from "@/stores";
-const { getUserMenu: userMenu, getIsCollapse: IsCollapse } = storeToRefs(useUserData());
+const { getUserMenu: userMenu, getIsCollapse: IsCollapse } = storeToRefs(
+  useUserData()
+);
 const { setIsCollapse } = useUserData();
 const route = useRoute();
 const active = computed(() => route.path);
@@ -65,7 +77,7 @@ const menuCloseClassName = computed(() =>
   height: 36px;
   color: #000 !important;
   border-radius: 6px !important;
-  padding-left: 16px;
+  padding-left: 10px;
   box-sizing: border-box;
 }
 .menu_close_action:hover {

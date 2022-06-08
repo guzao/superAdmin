@@ -1,5 +1,5 @@
 const { qs, TOKEN } = require('./utils')
-function login () {
+function login() {
   return qs({
     code: 0,
     msg: 'success',
@@ -14,7 +14,7 @@ function login () {
 }
 
 
-function userInfo () {
+function userInfo() {
   return qs({
     code: 0,
     msg: 'success',
@@ -27,7 +27,7 @@ function userInfo () {
 }
 
 
-function userMenu () {
+function userMenu() {
   return qs({
     code: 0,
     msg: 'success',
@@ -49,7 +49,8 @@ const userMenuData = [
     path: '/',
     component: 'layout',
     meta: {
-      title: '总览'
+      title: '总览',
+      icon: 'overview'
     },
     children: [
       {
@@ -69,7 +70,8 @@ const userMenuData = [
     path: '/monitor',
     component: 'layout',
     meta: {
-      title: '实时监视'
+      title: '实时监视',
+      icon: 'monitor'
     },
     children: [
       {
@@ -77,7 +79,7 @@ const userMenuData = [
         component: 'pages/monitor/projectInfo/index.vue',
         name: 'projectInfo',
         meta: {
-          title: '项目信息' 
+          title: '项目信息'
         },
       },
       {
@@ -98,7 +100,8 @@ const userMenuData = [
     path: '/report',
     component: 'layout',
     meta: {
-      title: '数据报表'
+      title: '数据报表',
+      icon: 'report'
     },
     children: [
       {
@@ -106,7 +109,7 @@ const userMenuData = [
         component: 'pages/dataReport/statisticalReport/index.vue',
         name: 'statisticalReport',
         meta: {
-          title: '统计报表' 
+          title: '统计报表'
         },
       },
       {
@@ -137,6 +140,7 @@ const userMenuData = [
     component: 'layout',
     meta: {
       title: '工单系统',
+      icon: 'order'
     },
     children: [
       {
@@ -166,6 +170,7 @@ const userMenuData = [
     component: 'layout',
     meta: {
       title: '智能分析',
+      icon: 'analyse'
     },
     children: [
       {
