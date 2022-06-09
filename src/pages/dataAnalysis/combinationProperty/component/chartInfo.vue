@@ -139,13 +139,20 @@ const createHeat = () => {
       x: 45,
       y: 35,
       x2: 15,
-      y2: 20
+      y2: 20,
+      show: true,
+      backgroundColor: "#fafafb",
+      borderWidth: 0
     },
     xAxis: {
       type: "category",
       data: hours,
-      splitArea: {
-        show: true
+      splitLine: {
+        show: true,
+        lineStyle: {
+          color: "#fff",
+          width: 5
+        }
       },
       axisLine: {
         show: false
@@ -157,8 +164,12 @@ const createHeat = () => {
     yAxis: {
       type: "category",
       data: days,
-      splitArea: {
-        show: true
+      splitLine: {
+        show: true,
+        lineStyle: {
+          color: "#fff",
+          width: 5
+        }
       },
       axisLine: {
         show: false
