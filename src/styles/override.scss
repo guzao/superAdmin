@@ -57,10 +57,13 @@
     color: rgb(0, 0, 0) !important;
   }
   th.el-table__cell {
-    background-color: rgba(0,0,0,0.03) !important;
+    background-color: #F7F7F7 !important;
   }
   tbody {
     color: rgb(0, 0, 0) !important;
+  }
+  .el-button>span{
+    color: rgba(216,34,44,1)!important;
   }
 }
 

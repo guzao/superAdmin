@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组</title>
+    <g id="电脑端备份" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="工单管理-工单详情" transform="translate(-233.000000, -488.000000)">
+            <g id="Popup" transform="translate(206.000000, 66.000000)">
+                <g id="附件信息" transform="translate(18.000000, 392.000000)">
+                    <g id="编组-5" transform="translate(9.000000, 29.000000)">
+                        <g id="编组" transform="translate(0.000000, 1.000000)">
+                            <rect id="矩形" fill-opacity="0.01" fill="#00AAFF" fill-rule="nonzero" x="0" y="0" width="16" height="16"></rect>
+                            <path d="M8.2357,3.18832 L3.28596333,8.13806667 C2.11439,9.30963333 2.11439,11.2091333 3.28596333,12.3807 L3.28596333,12.3807 C4.45753333,13.5522667 6.35703333,13.5522667 7.5286,12.3807 L13.4211667,6.48816667 C14.2022,5.7071 14.2022,4.44076667 13.4211667,3.65973333 L13.4211667,3.65973333 C12.6401,2.87867667 11.3737667,2.87867667 10.5927333,3.65973333 L4.70016667,9.55226667 C4.30966667,9.9428 4.30966667,10.5759667 4.70016667,10.9665 L4.70016667,10.9665 C5.0907,11.3570333 5.72386667,11.3570333 6.1144,10.9665 L11.0641333,6.01673333" id="路径" stroke="#00AAFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
