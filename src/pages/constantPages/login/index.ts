@@ -17,8 +17,8 @@ export function useLogin () {
   const remember = ref<boolean>(false)
   const ruleFormRef = ref<FormInstance>()
   const userForm = reactive({
-    name: 'test1',
-    password: 'Test$123',
+    name: 'guzao',
+    password: '4655429@Zlb',
     authentication: ''
   })
 
