@@ -4,6 +4,8 @@
       <div class="light-one" />
       <div class="light-two" />
       <div class="light-three" />
+      <div class="light-four" />
+      <div class="light-five" />
     </div>
     <el-container>
       <!-- 顶部nav -->
@@ -49,7 +51,8 @@ import MAside from "./layout/aside.vue";
     }
   }
   .light-box {
-    position: relative;
+    position: absolute;
+    height: 100vh;
     z-index: 0;
     .light-one {
       width: 400px;
@@ -92,6 +95,34 @@ import MAside from "./layout/aside.vue";
         rgba(255, 255, 255, 0)
       );
       transform: rotate(-122deg);
+    }
+    .light-four {
+      width: 400px;
+      height: 257px;
+      left: -264px;
+      bottom: -65px;
+      position: absolute;
+      z-index: 2;
+      background-image: linear-gradient(
+        to left,
+        rgb(255, 255, 255),
+        rgba(255, 255, 255, 0)
+      );
+      transform: rotate(-122deg);
+    }
+    .light-five {
+      width: 400px;
+      height: 257px;
+      left: -137px;
+      bottom: -169px;
+      position: absolute;
+      z-index: 2;
+      background-image: linear-gradient(
+        to left,
+        rgb(255, 255, 255),
+        rgba(255, 255, 255, 0)
+      );
+      transform: rotate(58deg);
     }
   }
 }

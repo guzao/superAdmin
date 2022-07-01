@@ -132,9 +132,9 @@ const menuCloseClassName = computed(() =>
 </style>
 <style lang="scss" scoped>
 .el-aside {
-  background-image: url(https://img02.mockplus.cn/idoc/sketch/2022-05-20/61cb004d-b8e7-4660-92d7-e18d1ea5015d.png!thumb-p-25);
-  background-position: bottom;
-  background-repeat: no-repeat;
+  // background-image: url(https://img02.mockplus.cn/idoc/sketch/2022-05-20/61cb004d-b8e7-4660-92d7-e18d1ea5015d.png!thumb-p-25);
+  // background-position: bottom;
+  // background-repeat: no-repeat;
   width: auto;
   padding-left: 16px;
   box-sizing: border-box;
